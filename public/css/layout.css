@@ -1,0 +1,36 @@
+.layout {
+    display: none;
+    width: 100vw;
+    flex-direction: column;
+}
+
+.layout__form {
+    display: flex;
+    gap: var(--xs);
+}
+
+.layout__form a {
+    text-decoration: none;
+    align-content: center;
+    font-weight: 900;
+}
+
+.navbar {
+    background-color: var(--c-secondary);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto var(--xs) auto;
+    padding: var(--xs);
+}
+
+.logout {
+    float:right;
+}
+
+.nav__logo > img {
+    width: 30px;
+    height: 30px;
+}
+

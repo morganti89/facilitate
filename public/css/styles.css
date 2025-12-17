@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:wght@400;500&display=swap');
+
+:root {
+    /* COLORS */
+    --c-text-light: #F9FAFB;
+    --c-text: #111;
+    --c-sucess: #4A90E2;
+    --c-danger: #D0021B;
+    --c-warning: #ADB5BD;
+    --c-black: #000;
+    --c-primary: #FD7E14;
+    --c-secondary: #212529;
+    --c-btn: #f7ae01;
+    --c-btn-hover: #ebc160;
+
+    /* BACKGROUND COLORS */
+    --bg-c-main: #f0f0f0;
+    --bg-c-main-dark: #15171e;
+    --bg-c-light-dark: #aeaeae;
+    --bg-c-main-secondary: #15171e;
+    --bg-c-secondary: #148eff;
+    --bg-c-secondary-hover:#79adde;
+
+    /* SIZES */
+    --xs: 0.5rem;
+    --s: 1rem;
+    --m: 1.5rem;
+    --l: 2rem;
+    --xl: 2.5rem;
+    --xxl: 3rem;
+
+    /* TEXT SIZES */
+    --txt-xs: 8px;
+    --txt-s: 12px;
+    --txt-m: 16px;
+    --txt-l: 20px;
+    --txt-xl: 26px;
+    --txt-xxl: 32px;
+
+    /*FONT*/
+    --font-family:'Poppins',sans-serif;
+}
+
+* {
+    color: var(--c-text);
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+}
+
+*:disabled {
+    background-color: dimgray;
+}
+
+body {
+    background-color: var(--bg-c-main);
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+x-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* MARGIN */
+.m-a {
+    margin: auto;
+}
+
+.m-xs {
+    margin: var(--xs);
+}
+
+.m-s {
+    margin: var(--s);
+}
+
+.m-m {
+    margin: var(--m);
+}
+
+.m-l {
+    margin: var(--l);
+}
+
+.m-xl {
+    margin: var(--xl);
+}
+
+.m-xxl {
+    margin: var(--xxl);
+}
+
+
+/*MARGIN RIGHT*/
+.mr-xs {
+    margin-right: var(--xs);
+}
+
+.mr-s {
+    margin-right: var(--s);
+}
+
+.mr-m {
+    margin-right: var(--m);
+}
+
+.mr-l {
+    margin-right: var(--l);
+}
+
+.mr-xl {
+    margin-right: var(--xl);
+}
+
+.mr-xxl {
+    margin-right: var(--xxl);
+}
+
+/*MARGIN LEFT*/
+.ml-xs {
+    margin-left: var(--xs);
+}
+
+.ml-s {
+    margin-left: var(--ms);
+}
+
+.ml-m {
+    margin-left: var(--m);
+}
+
+.ml-l {
+    margin-left: var(--l);
+}
+
+.ml-xl {
+    margin-left: var(--xl);
+}
+
+.ml-xxl {
+    margin-left: var(--xxl);
+}
+
+/*MARGIN TOP*/
+.mt-xs {
+    margin-top: var(--xs);
+}
+
+.mt-s {
+    margin-top: var(--s);
+}
+
+.mt-m {
+    margin-top: var(--m);
+}
+
+.mt-l {
+    margin-top: var(--l);
+}
+
+.mt-xl {
+    margin-top: var(--xl);
+}
+
+.mt-xxl {
+    margin-top: var(--xxl);
+}
+
+/*MARGIN BOTTON*/
+.mb-xs {
+    margin-bottom: var(--xs);
+}
+
+.mb-s {
+    margin-bottom: var(--s);
+}
+
+.mb-m {
+    margin-bottom: var(--m);
+}
+
+.mb-l {
+    margin-bottom: var(--l);
+}
+
+.mb-xl {
+    margin-bottom: var(--xl);
+}
+
+.mb-xxl {
+    margin-bottom: var(--xxl);
+}
+
+/* PADDING */
+.pd-xs {
+    padding: var(--xl);
+}
+
+.pd-s {
+    padding: var(--xl);
+}
+
+.pd-m {
+    padding: var(--xl);
+}
+
+.pd-l {
+    padding: var(--xl);
+}
+
+.pd-xl {
+    padding: var(--xl);
+}
+
+.pd-xxl {
+    padding: var(--xxl);
+}
+
+/* ======================================== */
+/*          BACKGROUND COLOR                */
+/* ======================================== */
+.bg-main {
+    background-color: var(--bg-c-main);
+}
+
+.bg-secondary {
+    background-color: var(--bg-c-main-secondary);
+}
+
+/* ======================================== */
+/*                TEXT COLOR                */
+/* ======================================== */
+.txt-color-primary {
+    color: var(--c-text-light);
+}
+
+.txt-color-dark {
+    color: var(--c-text-dark);
+}
+
+/* ########################################################## */
+
+/* WIDHT */
+.w-100 {
+    width: 100%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+/* ########################################################## */
+
+/* HEIGHT */
+
+.h-100 {
+    height: 100%;
+}
+.h-75 {
+    height: 75%;
+}
+.h-100-vh {
+    height: 100vh;
+}
+.h-75-vh {
+    height: 75vh;
+}
+
+/* ########################################################## */
+
+/* DISPLAY */
+.d-flex {
+    display: flex;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-grid {
+    display: grid;
+}
+
+/* ########################################################## */
+
+/* FLEX ATTRIBUTES */
+/* FLEX DIRECTION */
+.flex-dir-row {
+    flex-direction: row;
+}
+
+.flex-dir-row-rv {
+    flex-direction: row-reverse;
+}
+
+.flex-dir-column {
+    flex-direction: column;
+}
+
+.flex-dir-column-rv {
+    flex-direction: column-reverse;
+}
+
+/* ########################################################## */
+/* JUSTIFY CONTENT */
+.justify-cont-start {
+    justify-content: start;
+}
+
+.justify-cont-center {
+    justify-content: center;
+}
+
+.justify-cont-sb {
+    justify-content: space-between;
+}
+
+.justify-cont-sa {
+    justify-content: space-around;
+}
+
+.justify-cont-se {
+    justify-content: space-evenly;
+}
+
+/* TEXT */
+.txt-align-center {
+    text-align: center;
+}
+
+.txt-size-xxs {
+    font-size: var(--xxs);
+}
+.txt-size-xs {
+    font-size: var(--xs);
+}
+.txt-size-m {
+    font-size: var(--m);
+}
+.txt-size-l {
+    font-size: var(--l);
+}
+.txt-size-xl {
+    font-size: var(--xl);
+}
+.txt-size-xxl {
+    font-size: var(--xxl);
+}
+
+/* GAP */
+.g-xs {
+    gap: var(--xs);
+}
+
+.g-s {
+    gap: var(--s);
+}
+
+.g-m {
+    gap: var(--m);
+}
+
+.g-l {
+    gap: var(--l);
+}
+
+.g-xl {
+    gap: var(--xl);
+}
+
+.g-xxl {
+    gap: var(--xxl);
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-content-center {
+    align-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-c-main);
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+.btn-submit {
+    padding: var(--xs);
+    text-decoration: none;
+    text-align: center;
+    color: var(--c-text-light);
+    background-color: var(--bg-c-secondary);
+    font-weight: 800;
+    border-radius: var(--xs);
+}
+
+.btn-submit:hover {
+    color: var(--c-text-light);
+    background-color: var(--bg-c-secondary-hover);
+}
+
+.btn-shadow {
+    background-color: var(--c-blue);
+    color: var(--c-text);
+    box-shadow: #bebbbb 1px 1px;
+}
+
+.list-group {
+    gap: var(--m);
+}
+
+.list-item {
+    list-style-type: none;
+    align-content: center;
+    font-weight: 900;
+}
+
+.list-item a {
+    padding: 12px 16px;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.logo_img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.logo_link {
+    align-content: center;
+}
+
+.dropdown {
+    position:relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 300px;
+    padding: 12px 16px;
+}
+
+.dropdown-content a {
+    color: var(--c-text-light);
+    display: block;
+    text-decoration: none;
+    background-color: var(--bg-c-secondary);
+}
+
+.dropdown-content a:hover {
+    background-color: var(--bg-c-secondary-hover);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    color: var(--c-text-light);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-weight: 900;
+}
+.dropbtn:hover {
+    font-weight: 900;
+    background-color: var(--c-primary);
+}
+
+/*####################################################*/
+/* TABLE*/
+/* .tb {
+    border: 1px solid var(--bg-c-light);
+} */
+
+.tb td {
+    border: 1px solid var(--bg-c-light);
+    text-align: center;
+    padding: var(--xs);
+    font-size: var(--txt-l);
+}
+
+.tb th {
+    font-size: var(--txt-l);
+}

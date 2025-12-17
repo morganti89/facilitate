@@ -1,0 +1,94 @@
+.form {
+    display: flex; 
+    flex-direction: column;
+    padding: var(--xxl);
+    gap: var(--l);
+    width: 40%;
+    margin: var(--xl) auto;
+    border: 1px solid var(--c-text);
+    border-radius: 12px;
+    box-shadow: 5px 5px 2px 2px #333 ;
+}
+
+.form__main_title {
+    color: var(--c-text);
+    font-size: var(--xl);
+}
+
+.form__label {
+    color: var(--c-text);
+    font-size: var(--m);
+    width: 100%;
+}
+
+.form__input_text {
+    padding: var(--xs);
+    width: 80%;
+    color: var(--c-text-dark);
+}
+
+.form__input_select {
+    padding: var(--xs);
+    width: 40%;
+    color: var(--c-text-dark);
+}
+
+.form__btn {
+    background-color: var(--bg-c-secondary);
+    border-radius: var(--xs);
+    width: 10rem;
+    font-size: var(--m);
+    margin: 0 auto;
+}
+
+.form__fake-btn {
+    background-color: dimgray;
+    border-radius: var(--xs);
+    width: 10rem;
+    font-size: var(--m);
+    margin: 0 auto;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.form__btn:hover {
+    background-color: var(--c-btn-hover);
+}
+
+.form__link {
+    text-decoration: none;
+    color: var(--c-text);
+    font-style: italic;
+    font-size: var(--m);
+}
+
+.form__link:hover {
+    color: var(--bg-c-secondary-hover);
+}
+
+.form__field {
+    display: flex;
+    width: 100%;
+    gap:var(--xs);
+    flex-direction: column;
+}
+
+.tabs {
+    width: 50%;
+    display: flex;
+    margin: var(--m) auto 0 auto;
+    justify-content: center;
+    gap:1rem;
+    
+}
+.tabs button{
+    padding: var(--xs);
+    background-color: var(--bg-c-form);
+    font-size: var(--txt-xl);
+    font-weight: 800;
+}
+
+.tabs button:hover {
+    background-color: var(--bg-c-light-dark);
+    color: var(--c-black);
+}

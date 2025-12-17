@@ -1,0 +1,21 @@
+.section__dashboard {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.btn-add img {
+    color: var(--c-btn);
+    width: 1.8rem;
+    height: 1.8rem;
+
+}
+
+.list_counts__item {
+    list-style-type: none;
+}
+
+.list_counts__link {
+    text-decoration: none;
+}
