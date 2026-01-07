@@ -13,7 +13,7 @@ class UserModel extends Model
     private string $email;
     private string $password;
     private int $companyId;
-    private int $admin;
+    private int $type;
 
     public function __construct()
     {
@@ -33,6 +33,12 @@ class UserModel extends Model
     public function getUser(string $by): object|null
     {
         return self::getBy($by)[0];
+    }
+
+    public function getUserModules(): array {
+        self::$model = ModuleModel::class;
+        return self::createQuery(
+            'SELECT * from modules where id in (SELECT module_id from user_modules WHERE user_id=:user_id)', ['user_id' => $this->getId()]);
     }
 
     public function getId(): int
@@ -60,6 +66,11 @@ class UserModel extends Model
         return $this->companyId;
     }
 
+    public function getType(): int
+    {
+        return $this->type;
+    }
+
     public function setId(int $id): void
     {
         $this->id = $id;
@@ -83,8 +94,8 @@ class UserModel extends Model
         $this->password = $password;
     }
 
-    public function setAdmin(int $admin): void
+    public function setType(int $type): void
     {
-        $this->admin = $admin;
+        $this->type = $type;
     }
 }

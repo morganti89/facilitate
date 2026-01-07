@@ -53,7 +53,12 @@ class CompanyController extends Controller
         }
     }
 
-    public function companyData(): void
+    public function getCompany(): CompanyModel|null {
+        Session::insert('id', Session::get('company_id'));
+        return CompanyModel::getInstance()->getBy('id')[0];
+    }
+
+    private function companyData(): void
     {
         $data = [
             'company_name' => $this->data['company_name'],

@@ -20,7 +20,11 @@ class Session {
         $_SESSION[$key] = $data;
     }
 
-    public static function destroy() {
+    public static function destroy(): void {
         $_SESSION = [];
+    }
+
+    public static function delete($key): void {
+        unset($_SESSION[$key]);
     }
 }

@@ -26,18 +26,6 @@ class Model
         return self::$instance;
     }
 
-    protected function setRepository(Repository $repository) : self
-    {
-        self::getInstance()::$repository = $repository;
-        return self::$instance;
-    }
-
-    protected function setTable(string $tableName): Model
-    {
-        self::$repository->setTable($tableName);
-        return self::$instance;
-    }
-
     public static function save(): int
     {
         $dataRequest = Request::getRequest()->post();
@@ -62,6 +50,23 @@ class Model
     {
         self::$hydrateData = $hydrateData;
         return self::getInstance()->getAllData();
+    }
+
+    public static function createQuery(string $query, $conditions): array {
+        $data = self::$repository->customQuery($query, $conditions);
+        return self::getInstance()->hydrateData(self::$model, $data);
+    }
+
+    protected function setRepository(Repository $repository) : self
+    {
+        self::getInstance()::$repository = $repository;
+        return self::$instance;
+    }
+
+    protected function setTable(string $tableName): Model
+    {
+        self::$repository->setTable($tableName);
+        return self::$instance;
     }
 
     protected function getAllData(array $by = []): array|null

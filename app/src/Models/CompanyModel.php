@@ -15,7 +15,6 @@ class CompanyModel extends Model{
     private string $fone;
     private string $modules;
     private string $zipCode;
-
     private static array $dataRequest;
     public function __construct()
     {

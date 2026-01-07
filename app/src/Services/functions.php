@@ -1,5 +1,8 @@
 <?php
 
+use App\Facilitate\Services\Redis;
+use App\Facilitate\Services\Session;
+
 function dd($v)
 {
     echo '<pre
@@ -30,6 +33,10 @@ function render_view(string $viewName, array $viewVariables = []): void
 {
     extract(['slot' => $viewName]);
     $viewVariables['auth'] = $_SESSION['auth'];
+
+    $rClient = Redis::getInstance()->connect()->getClient();
+    $viewVariables['modules'] = json_decode($rClient->get('modules_'.Session::get('company_id')), true);;
+
     foreach ($viewVariables as $key => $value) {
         extract([$key => $value]);
     }

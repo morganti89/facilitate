@@ -92,6 +92,11 @@ class DB
         return self::$instance;
     }
 
+    public static function conditions(array $conditions): DB|null {
+        self::$conditions = $conditions;
+        return self::$instance;
+    }
+
     public  static function where($condititon): DB|null
     {
         if ($condititon != []) {

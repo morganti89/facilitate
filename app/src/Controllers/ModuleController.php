@@ -5,9 +5,12 @@ namespace App\Facilitate\Controllers;
 use App\Facilitate\Controllers\Controller;
 use App\Facilitate\Models\ConfigModel;
 use App\Facilitate\Models\ModuleModel;
+use App\Facilitate\Models\UserModel;
 
 class ModuleController extends Controller
 {
+
+    const TYPE_SUPER_USER = 3;
 
     public function index()
     {
@@ -22,11 +25,25 @@ class ModuleController extends Controller
         }
     }
 
-    public function getAllModules(): array|null
+    public function getAllModulesByTypeUser(UserModel $user): array|null
     {
 
-        $modules = ModuleModel::getInstance()->getAll();
+        if ($user->getType() === self::TYPE_SUPER_USER) {
+            return $this->getAllModules();
+        }
 
+        $modules = $user->getUserModules();
+        return $this->parseModules($modules);
+    }
+
+    public function getAllModules(): array
+    {
+        $modules = ModuleModel::getInstance()->getAll();
+        return $this->parseModules($modules);
+    }
+
+    private function parseModules(array $modules): array
+    {
         $data = [];
         foreach ($modules as $module) {
             $aux = [];

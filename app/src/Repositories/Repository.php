@@ -35,4 +35,12 @@ class Repository {
             ->all();
     }
 
+    public function customQuery(string $sql, array $where = []) {
+        return DB::getInstance()
+            ->sql($sql)
+            ->conditions($where)
+            ->prepare()
+            ->all();
+    }
+
 }
