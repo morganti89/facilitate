@@ -11,5 +11,8 @@
             "name": "Paulo Artur Morganti Junior",
             "email": "morganti.artur@gmail.com"
         }
-    ]
+    ],
+    "require": {
+        "predis/predis": "^3.3"
+    }
 }

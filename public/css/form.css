@@ -92,3 +92,7 @@
     background-color: var(--bg-c-light-dark);
     color: var(--c-black);
 }
+
+.tab-active {
+    background-color: var(--bg-c-secondary);
+}

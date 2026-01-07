@@ -7,5 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Route\\Facilitate\\' => array($baseDir . '/routes'),
+    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
+    'Predis\\' => array($vendorDir . '/predis/predis/src'),
     'App\\Facilitate\\' => array($baseDir . '/app/src'),
 );

@@ -35,16 +35,12 @@ class Request
         }
     }
 
-    public function insert_post(array $array, bool $nullable = false) {
+    public function insert_post(array $array, bool $nullable = false): void {
         
         if ($nullable) {
             $_POST = [];
         }
-        
-        foreach ($array as $key => $value) {
-            $_POST[$key] = $value;
-        }
-        
+
         foreach ($array as $key => $value) {
             $_POST[$key] = $value;
         }

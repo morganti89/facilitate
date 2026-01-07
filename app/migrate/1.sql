@@ -1,6 +1,6 @@
 create table users (
     id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    admin TINYINT NOT NULL,
+    type TINYINT NOT NULL,
     company_id BIGINT UNSIGNED NOT NULL,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
@@ -32,7 +32,6 @@ CREATE TABLE companies (
     company_email VARCHAR(100) NOT NULL,
     address_id BIGINT UNSIGNED,
     fone VARCHAR(20),
-    modules TEXT,
     create_at VARCHAR(20),
     update_at VARCHAR(20),
     FOREIGN KEY (address_id) REFERENCES address(id)
@@ -56,7 +55,7 @@ CREATE TABLE modules (
     link VARCHAR(20)
 )
 
-CREATE TABLE company_modules (
+CREATE TABLE user_modules (
     id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
     company_id BIGINT UNSIGNED NOT NULL,
     module_id INT UNSIGNED NOT NULL

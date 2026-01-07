@@ -27,6 +27,11 @@
 
 .logout {
     float:right;
+    color: var(--c-text-light);
+}
+
+.logout:hover {
+    color: var(--c-primary);
 }
 
 .nav__logo > img {

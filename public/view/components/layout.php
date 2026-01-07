@@ -45,7 +45,7 @@
                             </li>
                         </ul>
                     <?php endif ?>
-                    <a class="btn bg-btn mr-l logout" href="<?= route('login/logout') ?>">Logout</a>
+                    <a class="mr-l logout" href="<?= route('login/logout') ?>">Logout</a>
                 </form>
             </nav>
         </div>

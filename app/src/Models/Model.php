@@ -16,6 +16,10 @@ class Model
     public static function getInstance(): self
     {
 
+        if (self::$repository === null) {
+            self::$repository = new Repository();
+        }
+
         if (self::$instance === null) {
             self::$instance = new self();
         }
@@ -24,11 +28,6 @@ class Model
 
     protected function setRepository(Repository $repository) : self
     {
-        if (!$repository) {
-            self::getInstance()::$repository = new Repository();
-            return self::$instance;
-        }
-
         self::getInstance()::$repository = $repository;
         return self::$instance;
     }

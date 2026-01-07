@@ -11,6 +11,11 @@ class ComposerStaticInit857a8dba51a32ada5812570dfe436cdf
         array (
             'Route\\Facilitate\\' => 17,
         ),
+        'P' => 
+        array (
+            'Psr\\Http\\Message\\' => 17,
+            'Predis\\' => 7,
+        ),
         'A' => 
         array (
             'App\\Facilitate\\' => 15,
@@ -21,6 +26,14 @@ class ComposerStaticInit857a8dba51a32ada5812570dfe436cdf
         'Route\\Facilitate\\' => 
         array (
             0 => __DIR__ . '/../..' . '/routes',
+        ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Predis\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/predis/predis/src',
         ),
         'App\\Facilitate\\' => 
         array (

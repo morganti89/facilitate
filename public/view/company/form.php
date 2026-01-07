@@ -2,7 +2,7 @@
     notRenderLayout="false"
     title="Nova conta"
     css="<?= DIR_CSS . 'form.css' ?>"
-    js="<?= DIR_JS . 'company.js' ?>">
+    js="<?= DIR_JS . 'index.js' ?>">
     <section class="h-100-vh ">
 
         <div class="tabs">
