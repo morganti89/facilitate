@@ -32,5 +32,10 @@ class Redis {
         return self::$client;
     }
 
-
+    public static function destroy():void {
+        self::getInstance()
+            ->connect()
+            ->getClient()
+            ->del('modules_' . Session::get('company_id'));
+    }
 }

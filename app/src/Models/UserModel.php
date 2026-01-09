@@ -46,7 +46,7 @@ class UserModel extends Model
         return $this->id;
     }
 
-    public function getUsername(): string
+    public function getUserName(): string
     {
         return $this->userName;
     }

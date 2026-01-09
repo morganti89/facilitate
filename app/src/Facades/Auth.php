@@ -2,6 +2,7 @@
 
 namespace App\Facilitate\Facades;
 
+use App\Facilitate\Services\Redis;
 use App\Facilitate\Services\Session;
 
 class Auth {
@@ -35,6 +36,7 @@ class Auth {
     }
 
     public function destroy(): void {
+        Redis::destroy();
         session_destroy();
         redirect('');
     }

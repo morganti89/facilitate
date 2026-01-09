@@ -1,7 +1,6 @@
 <?php
 
-use App\Facilitate\Services\Redis;
-use App\Facilitate\Services\Session;
+use App\Facilitate\Services\System;
 
 function dd($v)
 {
@@ -34,13 +33,11 @@ function render_view(string $viewName, array $viewVariables = []): void
     extract(['slot' => $viewName]);
     $viewVariables['auth'] = $_SESSION['auth'];
 
-    $rClient = Redis::getInstance()->connect()->getClient();
-    $viewVariables['modules'] = json_decode($rClient->get('modules_'.Session::get('company_id')), true);;
+    System::getModulesAndUser($viewVariables);
 
     foreach ($viewVariables as $key => $value) {
         extract([$key => $value]);
     }
-
 
     ob_start();
     include DIR_VIEW . "{$viewName}.php";

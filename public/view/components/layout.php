@@ -35,7 +35,7 @@
                         <ul class="list-group d-flex">
                             <li class="list-item">
                                 <div class="dropdown">
-                                    <button class="dropbtn"><?= $user ?></button>
+                                    <button class="dropbtn"><?= $user->getUserName() ?></button>
                                     <div class="dropdown-content">
                                         <a href="#">Conta</a>
                                         <a href="#">Suporte</a>
